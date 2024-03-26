@@ -1,0 +1,32 @@
+.flex-layout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.navbar {
+  // extends from another class
+  // share what they have in common
+  // in the css file will have them with a comma
+  @extend .flex-layout;
+  // unique things from this class:
+  padding: $base-padding $base-padding * 2;
+  box-shadow: $base-box-shadow;
+
+  .site-title {
+    font-size: $font-size-lg;
+  }
+
+  .container {
+    @extend .flex-layout;
+  }
+}
+
+@each $key, $val in $colors {
+  .navbar-#{$key} {
+    @extend .navbar;
+    background-color: $val;
+  }
+}
