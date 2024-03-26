@@ -1,0 +1,8 @@
+// take a color
+@function light-comp($color) {
+    // sass function: complement()
+    $complement: complement($color);
+    $light-complement: lighten($complement, 30%);
+    // return the value
+    @return $light-complement;
+}

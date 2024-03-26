@@ -1,5 +1,6 @@
 // variables & functions
 @import 'variables';
+@import 'functions';
 
 // base (reset) & layout
 @import 'base';
@@ -12,3 +13,5 @@
 @import 'components/button';
 
 // utilities (margin, padding, opacity)
+@import 'utilities';
+@import 'breakpoints';
